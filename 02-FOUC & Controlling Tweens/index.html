@@ -24,12 +24,21 @@
     const container = document.querySelector(".container");
 
     gsap.from(container, {
-      borderRadius:'50%',
-      width: '16vw',
-      height: '16vw',
-      paused: true,
-      duration: 1,
+      borderRadius: '2%',
+      width: '20vw',
+      height: '28vw',
       ease: 'elastic.out(1, 0.3)',
+      duration: 1,
+      paused: true,
+
+    })
+
+    container.addEventListener('mouseenter', () => {
+      gsap.to(container, {
+        borderRadius:'50%',
+        width: '16vw',
+        height: '16vw',
+      })
     })
 
   });
